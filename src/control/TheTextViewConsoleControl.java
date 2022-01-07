@@ -221,12 +221,15 @@ public class TheTextViewConsoleControl {
     }
 
     public void btnUpOnAction(ActionEvent actionEvent) {
+
     }
 
     public void btnReplaceOnAction(ActionEvent actionEvent) {
+
     }
 
     public void btnClearOnAction(ActionEvent actionEvent) {
+
     }
 
     public void btnDwnOnAction(ActionEvent actionEvent) {

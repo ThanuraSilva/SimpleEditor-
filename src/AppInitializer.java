@@ -20,7 +20,7 @@ public class AppInitializer extends Application {
         )));
         primaryStage.setTitle("TextView-0.2.0");
         primaryStage.show();
-        primaryStage.isResizable();
+
 
 
     }
