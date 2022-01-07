@@ -20,7 +20,8 @@ import java.net.URL;
 import java.nio.file.Files;
 
 import java.nio.file.Paths;
-
+import java.util.Arrays;
+import java.util.regex.Pattern;
 
 
 public class TheTextViewConsoleControl {
@@ -89,10 +90,9 @@ public class TheTextViewConsoleControl {
              if(newValue!=null) btnSave.setDisable(false);
              if(newValue!=null) btnCopy.setDisable(false);
              if(newValue!=null) btnCut.setDisable(false);
-             if(newValue!=null) btnPaste.setDisable(false); 
-
-
-
+             if(newValue!=null) btnPaste.setDisable(false);
+             getWordCount();
+             getCharactCount();
         });
 
         m1.setOnAction(this::btnNewOnAction);
@@ -150,12 +150,35 @@ public class TheTextViewConsoleControl {
 
     }
 
+    private void getCharactCount() {
+        int length = Pattern.compile(txtFSpace.getText()).pattern().trim().length();
+        lblCharacterCount.setText(String.valueOf(length));
+
+    }
+
+    private void getWordCount() {
+        String inputText = txtFSpace.getText();
+
+        if(inputText==null || inputText.isEmpty()){
+            return;
+
+        }else {
+
+            String[] splitText = inputText.split("\\s+");
+            lblWordCount.setText(String.valueOf(splitText.length));
+        }
+
+    }
+
     private void setDisableFields(boolean disableFields) {
         mnuEdit.setDisable(disableFields);
         btnSave.setDisable(disableFields);
         btnCopy.setDisable(disableFields);
         btnCut.setDisable(disableFields);
         btnPaste.setDisable(disableFields);
+        txtReplace.setDisable(disableFields);
+        btnReplace.setDisable(disableFields);
+        btnReplaceAll.setDisable(disableFields);
     }
 
 
@@ -221,12 +244,17 @@ public class TheTextViewConsoleControl {
     }
 
     public void btnUpOnAction(ActionEvent actionEvent) {
+
     }
 
     public void btnReplaceOnAction(ActionEvent actionEvent) {
+
     }
 
     public void btnClearOnAction(ActionEvent actionEvent) {
+        txtFind.clear();
+        txtReplace.clear();
+
     }
 
     public void btnDwnOnAction(ActionEvent actionEvent) {
@@ -239,6 +267,8 @@ public class TheTextViewConsoleControl {
     }
 
     public void btnFindOnAction(ActionEvent actionEvent) {
+        btnReplace.setDisable(false);
+        btnReplaceAll.setDisable(false);
     }
 
     public void btnReplaceAll(ActionEvent actionEvent) {
