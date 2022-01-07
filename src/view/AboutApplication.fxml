@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="450.0" prefWidth="793.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.AboutApplicationControl">
+   <children>
+      <Label layoutX="378.0" layoutY="52.0" text="TextView 1.0.1">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Label>
+      <Label layoutX="431.0" layoutY="90.0" text="&quot;Your choice is the best choice&quot;">
+         <font>
+            <Font name="System Italic" size="16.0" />
+         </font>
+      </Label>
+      <TextArea editable="false" layoutX="-3.0" layoutY="249.0" prefHeight="205.0" prefWidth="832.0" style="-fx-border-color: #0000;" text="TextView is a simple text viwer and specialy encompassed with essential commands to easy your&#10;text manipulating pattern. New unique button patterns included from this version &#10;&#10;Powered by Thanu IT - 2022 January&#10;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextArea>
+   </children>
+</AnchorPane>
