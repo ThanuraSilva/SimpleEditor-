@@ -222,6 +222,8 @@ public class TheTextViewConsoleControl {
 
     public void btnUpOnAction(ActionEvent actionEvent) {
 
+
+
     }
 
     public void btnReplaceOnAction(ActionEvent actionEvent) {
