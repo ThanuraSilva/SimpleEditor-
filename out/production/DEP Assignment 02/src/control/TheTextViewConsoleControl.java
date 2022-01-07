@@ -89,7 +89,7 @@ public class TheTextViewConsoleControl {
              if(newValue!=null) btnSave.setDisable(false);
              if(newValue!=null) btnCopy.setDisable(false);
              if(newValue!=null) btnCut.setDisable(false);
-             if(newValue!=null) btnPaste.setDisable(false);
+             if(newValue!=null) btnPaste.setDisable(false); 
 
 
 

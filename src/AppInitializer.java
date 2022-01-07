@@ -18,7 +18,7 @@ public class AppInitializer extends Application {
         primaryStage.setScene(new Scene(FXMLLoader.load(
                 getClass().getResource("view/TheTextViewConsole.fxml")
         )));
-        primaryStage.setTitle("TextView -0.2.0");
+        primaryStage.setTitle("TextView-0.2.0");
         primaryStage.show();
 
 

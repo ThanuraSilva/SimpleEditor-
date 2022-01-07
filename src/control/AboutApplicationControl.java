@@ -1,4 +1,4 @@
 package control;
 
-public class AboutApplicationControl {
+public class AboutApplicationControl{
 }
