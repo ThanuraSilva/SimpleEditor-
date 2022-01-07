@@ -32,7 +32,7 @@
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
-      <Button styleClass="btnSave" fx:id="btnOpen" layoutX="219.0" layoutY="187.0" mnemonicParsing="false" onAction="#btnOpenOnAction" prefHeight="29.0" prefWidth="81.0" style="-fx-background-color: #ff9f1a;" text="Open" textFill="WHITE">
+      <Button styleClass="btnSaveData" fx:id="btnOpen" layoutX="219.0" layoutY="187.0" mnemonicParsing="false" onAction="#btnOpenOnAction" prefHeight="29.0" prefWidth="81.0" style="-fx-background-color: #ff9f1a;" text="Open" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
