@@ -7,12 +7,12 @@
 
 <AnchorPane prefHeight="450.0" prefWidth="793.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.AboutApplicationControl">
    <children>
-      <Label layoutX="378.0" layoutY="52.0" text="TextView 0.1.0">
+      <Label layoutX="378.0" layoutY="52.0" text="SimpleEditor++ V.0.1.0">
          <font>
             <Font size="33.0" />
          </font>
       </Label>
-      <Label layoutX="431.0" layoutY="90.0" text="&quot;Your choice is the best choice&quot;">
+      <Label layoutX="536.0" layoutY="90.0" text="&quot;Simple TextEditing Solution&quot;">
          <font>
             <Font name="System Italic" size="16.0" />
          </font>

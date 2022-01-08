@@ -114,13 +114,18 @@ public class TheTextViewConsoleControl {
 
         txtFind.textProperty().addListener((observable, oldValue, newValue) -> {
             btnClear.setDisable(false);
+
         });
 
         txtReplace.textProperty().addListener((observable, oldValue, newValue) -> {
             btnClear.setDisable(false);
         });
 
+        txtFSpace.textProperty().addListener((observable, oldValue, newValue) -> {
+            textChanges=true;
+            btnFind.fire();
 
+        });
 
         m1.setOnAction(this::btnNewOnAction);
 
@@ -344,28 +349,35 @@ public class TheTextViewConsoleControl {
 
     public void btnFindOnAction(ActionEvent actionEvent) {
 
-        txtFSpace.deselect();
-        if(textChanges){
-            int flags = 0;
 
-            if(!tglCaseSense.isSelected()) flags = flags | Pattern.CASE_INSENSITIVE;
-            if(!tglRegex.isSelected()) flags = flags | Pattern.LITERAL;
+           //txtFSpace.deselect();
 
-             matcher = Pattern.compile(txtFind.getText(), flags).
-                     matcher(txtFSpace.getText());
-             textChanges=false;
+                if (textChanges) {
+                    int flags = 0;
 
-        }
-        if(matcher.find()){
-            txtFSpace.selectRange(matcher.start(), matcher.end());
-            count++;
-            lblNowFinds.setText(String.valueOf(count));
+                    if (!tglCaseSense.isSelected()) flags = flags | Pattern.CASE_INSENSITIVE;
+                    if (!tglRegex.isSelected()) flags = flags | Pattern.LITERAL;
 
 
-        }else {
-            matcher.reset();
-            count=0;
-        }
+                    matcher = Pattern.compile(txtFind.getText(), flags).
+                            matcher(txtFSpace.getText());
+
+
+                    textChanges = false;
+
+                }
+                if (matcher.find()) {
+                    txtFSpace.selectRange(matcher.start(), matcher.end());
+                    count++;
+                    lblNowFinds.setText(String.valueOf(count));
+
+
+                } else {
+                    matcher.reset();
+                    count = 0;
+                }
+
+
 
     }
 
