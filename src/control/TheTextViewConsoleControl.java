@@ -16,6 +16,7 @@ import java.io.File;
 import java.io.FileWriter;
 
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.net.URL;
 import java.nio.file.Files;
 
@@ -190,8 +191,20 @@ public class TheTextViewConsoleControl {
     }
 
     private void getCharactCount() {
-        int length = Pattern.compile(txtFSpace.getText()).pattern().trim().length();
-        lblCharacterCount.setText(String.valueOf(length));
+        String characters = txtFSpace.getText();
+        int count=0;
+
+        for (int i = 0; i < characters.length(); i++) {
+            if(characters.charAt(i)!=' '){
+                count++;
+            }
+        }
+        lblCharacterCount.setText(String.valueOf(count));
+
+        //check about the exception regards following
+
+//        int length = Pattern.compile(txtFSpace.getText()).pattern().trim().length();
+//        lblCharacterCount.setText(String.valueOf(length));
 
     }
 
@@ -284,9 +297,6 @@ public class TheTextViewConsoleControl {
         btnReplaceAll.setDisable(true);
 
 
-
-
-
        if (!txtFSpace.getText().isEmpty()){
            btnSaveOnAction(actionEvent);
        }
@@ -297,11 +307,30 @@ public class TheTextViewConsoleControl {
     }
 
     public void btnUpOnAction(ActionEvent actionEvent) {
-       // btnFind.fire();
+        if(matcher.find()){
+            txtFSpace.selectRange(matcher.start(), matcher.end());
+            count++;
+            lblNowFinds.setText(String.valueOf(count));
+
+
+        }else {
+            matcher.reset();
+            count=0;
+        }
 
     }
 
     public void btnDwnOnAction(ActionEvent actionEvent) {
+        if(matcher.find()){
+            txtFSpace.selectRange(matcher.end(),matcher.start());
+            count++;
+            lblNowFinds.setText(String.valueOf(count));
+
+
+        }else {
+            matcher.reset();
+            count=0;
+        }
 
     }
 
@@ -351,6 +380,7 @@ public class TheTextViewConsoleControl {
             matcher.reset();
             count=0;
         }
+
 
 
     }
