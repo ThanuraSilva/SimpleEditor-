@@ -65,7 +65,9 @@ public class TheTextViewConsoleControl {
 
     public void initialize(){
 
-       setDisableFields(true);
+
+        setDisableFields(true);
+        txtFSpace.setWrapText(false);
 
         MenuItem m1 = new MenuItem("New");
         MenuItem m2 = new MenuItem("Open");
@@ -80,6 +82,7 @@ public class TheTextViewConsoleControl {
         MenuItem m11 = new MenuItem("Find");
         MenuItem m12 = new MenuItem("Replace");
         MenuItem m13 = new MenuItem("Replace All");
+        MenuItem m14 = new MenuItem("Wrap Text");
 
 
         mnuFile.getItems().add(m1);
@@ -95,6 +98,7 @@ public class TheTextViewConsoleControl {
         mnuEdit.getItems().add(m11);
         mnuEdit.getItems().add(m12);
         mnuEdit.getItems().add(m13);
+        mnuEdit.getItems().add(m14);
 
         mnuHelp.getItems().add(m10);
 
@@ -186,6 +190,10 @@ public class TheTextViewConsoleControl {
             txtReplace.setDisable(false);
             btnReplace.setDisable(true);
             btnReplaceAll.setDisable(false);
+        });
+
+        m14.setOnAction(event -> {
+            txtFSpace.setWrapText(true);
         });
 
     }
@@ -307,34 +315,14 @@ public class TheTextViewConsoleControl {
     }
 
     public void btnUpOnAction(ActionEvent actionEvent) {
-        if(matcher.find()){
-            txtFSpace.selectRange(matcher.start(), matcher.end());
-            count++;
-            lblNowFinds.setText(String.valueOf(count));
-
-
-        }else {
-            matcher.reset();
-            count=0;
-        }
+        btnFind.fire();
 
     }
 
     public void btnDwnOnAction(ActionEvent actionEvent) {
-        if(matcher.find()){
-            txtFSpace.selectRange(matcher.end(),matcher.start());
-            count++;
-            lblNowFinds.setText(String.valueOf(count));
 
-
-        }else {
-            matcher.reset();
-            count=0;
-        }
 
     }
-
-
 
     public void btnClearOnAction(ActionEvent actionEvent) {
         txtFind.clear();
@@ -342,8 +330,6 @@ public class TheTextViewConsoleControl {
         lblTotFinds.setText("");
 
     }
-
-
 
     public void tglCaseSensitiveOnAction(ActionEvent actionEvent) {
         textChanges = true;
@@ -381,18 +367,21 @@ public class TheTextViewConsoleControl {
             count=0;
         }
 
-
-
     }
 
     public void btnReplaceAll(ActionEvent actionEvent) {
-        Pattern.compile(txtFind.getText(),Pattern.LITERAL).matcher(txtFSpace.getText()).replaceAll(Matcher.quoteReplacement(txtReplace.getText()));
+
+        String addedNewValue=txtFSpace.getText().replace(txtFind.getText(),txtReplace.getText());
+        txtFSpace.setText(addedNewValue);
 
     }
 
     public void btnReplaceOnAction(ActionEvent actionEvent) {
-        Pattern.compile(txtFind.getText(),Pattern.LITERAL).matcher(txtFSpace.getText()).replaceFirst(Matcher.quoteReplacement(txtReplace.getText()));
+        String addedNewValue=txtFSpace.getText().replaceFirst(txtFind.getText(),txtReplace.getText());
+        txtFSpace.setText(addedNewValue);
 
 
     }
+
+
 }

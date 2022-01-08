@@ -74,7 +74,7 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <TextArea fx:id="txtFSpace" layoutX="25.0" layoutY="268.0" prefHeight="543.0" prefWidth="935.0" />
+      <TextArea fx:id="txtFSpace" layoutX="25.0" layoutY="268.0" prefHeight="543.0" prefWidth="935.0" AnchorPane.bottomAnchor="68.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="268.0" />
       <Separator layoutX="43.0" layoutY="240.0" prefHeight="11.0" prefWidth="914.0" />
       <JFXToggleButton fx:id="tglCaseSense" layoutX="763.0" layoutY="191.0" onAction="#tglCaseSensitiveOnAction" size="8.0" text="Case Sensitive" />
       <JFXToggleButton fx:id="tglRegex" layoutX="763.0" layoutY="153.0" onAction="#tglRegexOnAction" size="8.0" text="RegEx" />
@@ -83,8 +83,8 @@
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
-      <TextField fx:id="txtFind" layoutX="453.0" layoutY="63.0" prefHeight="35.0" prefWidth="242.0" promptText="Find" />
-      <TextField fx:id="txtReplace" layoutX="453.0" layoutY="111.0" prefHeight="35.0" prefWidth="242.0" promptText="Replace" />
+      <TextField fx:id="txtFind" layoutX="389.0" layoutY="63.0" prefHeight="35.0" prefWidth="306.0" promptText="Find" />
+      <TextField fx:id="txtReplace" layoutX="389.0" layoutY="111.0" prefHeight="35.0" prefWidth="306.0" promptText="Replace" />
       <Button fx:id="btnReplace" layoutX="715.0" layoutY="114.0" mnemonicParsing="false" onAction="#btnReplaceOnAction" prefHeight="29.0" prefWidth="92.0" style="-fx-background-color: #0fb9b1;" text="Replace" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
@@ -100,42 +100,42 @@
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
-      <Label layoutX="736.0" layoutY="827.0" prefHeight="25.0" prefWidth="158.0" text="Your Word Count: ">
+      <Label layoutX="736.0" layoutY="827.0" prefHeight="25.0" prefWidth="158.0" text="Your Word Count: " AnchorPane.bottomAnchor="27.0" AnchorPane.rightAnchor="86.0">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <Label fx:id="lblWordCount" layoutX="880.0" layoutY="827.0" prefHeight="25.0" prefWidth="71.0" text="00">
+      <Label fx:id="lblWordCount" layoutX="880.0" layoutY="827.0" prefHeight="25.0" prefWidth="71.0" text="0" AnchorPane.bottomAnchor="27.0" AnchorPane.rightAnchor="29.0">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <Label layoutX="482.0" layoutY="828.0" prefHeight="25.0" prefWidth="180.0" text="Your Charactor Count: ">
+      <Label layoutX="482.0" layoutY="828.0" prefHeight="25.0" prefWidth="180.0" text="Your Charactor Count: " AnchorPane.bottomAnchor="27.0" AnchorPane.rightAnchor="318.0">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <Label fx:id="lblCharacterCount" layoutX="658.0" layoutY="828.0" prefHeight="25.0" prefWidth="71.0" text="00">
+      <Label fx:id="lblCharacterCount" layoutX="658.0" layoutY="828.0" prefHeight="25.0" prefWidth="71.0" text="0" AnchorPane.bottomAnchor="27.0" AnchorPane.rightAnchor="251.0">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <Label layoutX="30.0" layoutY="828.0" prefHeight="25.0" prefWidth="43.0" text="Find:">
+      <Label layoutX="30.0" layoutY="828.0" prefHeight="25.0" prefWidth="43.0" text="Find:" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="35.0">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <Label fx:id="lblNowFinds" layoutX="73.0" layoutY="828.0" prefHeight="25.0" prefWidth="34.0" text="0">
+      <Label fx:id="lblNowFinds" layoutX="73.0" layoutY="828.0" prefHeight="25.0" prefWidth="34.0" text="0" AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="73.0">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <Label layoutX="90.0" layoutY="828.0" prefHeight="25.0" prefWidth="24.0" text="/">
+      <Label layoutX="90.0" layoutY="828.0" prefHeight="25.0" prefWidth="24.0" text="/" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="90.0">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <Label fx:id="lblTotFinds" layoutX="105.0" layoutY="828.0" prefHeight="25.0" prefWidth="34.0" text="0">
+      <Label fx:id="lblTotFinds" layoutX="105.0" layoutY="828.0" prefHeight="25.0" prefWidth="34.0" text="0" AnchorPane.bottomAnchor="27.0">
          <font>
             <Font size="15.0" />
          </font>
