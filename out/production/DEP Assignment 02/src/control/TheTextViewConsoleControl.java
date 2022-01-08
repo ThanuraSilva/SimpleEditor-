@@ -107,6 +107,16 @@ public class TheTextViewConsoleControl {
              getCharactCount();
         });
 
+        txtFind.textProperty().addListener((observable, oldValue, newValue) -> {
+            btnClear.setDisable(false);
+        });
+
+        txtReplace.textProperty().addListener((observable, oldValue, newValue) -> {
+            btnClear.setDisable(false);
+        });
+
+
+
         m1.setOnAction(this::btnNewOnAction);
 
         m2.setOnAction(event -> {
@@ -161,22 +171,21 @@ public class TheTextViewConsoleControl {
         });
 
         m11.setOnAction(event -> {
-            btnFind.fire();
+            btnFind.setDisable(false);
+            txtFind.setDisable(false);
         });
 
         m12.setOnAction(event -> {
-            btnReplace.fire();
+            txtReplace.setDisable(false);
+            btnReplace.setDisable(false);
+
         });
 
         m13.setOnAction(event -> {
-            btnReplaceAll.fire();
+            txtReplace.setDisable(false);
+            btnReplace.setDisable(true);
+            btnReplaceAll.setDisable(false);
         });
-
-
-
-
-
-
 
     }
 
@@ -206,9 +215,13 @@ public class TheTextViewConsoleControl {
         btnCopy.setDisable(disableFields);
         btnCut.setDisable(disableFields);
         btnPaste.setDisable(disableFields);
-        //txtReplace.setDisable(disableFields);
+        txtReplace.setDisable(disableFields);
         btnReplace.setDisable(disableFields);
         btnReplaceAll.setDisable(disableFields);
+        txtFind.setDisable(disableFields);
+        btnFind.setDisable(disableFields);
+        btnClear.setDisable(disableFields);
+
     }
 
 
@@ -264,6 +277,16 @@ public class TheTextViewConsoleControl {
 
     public void btnNewOnAction(ActionEvent actionEvent) {
         setDisableFields(false);
+        btnFind.setDisable(true);
+        txtFind.setDisable(true);
+        txtReplace.setDisable(true);
+        btnReplace.setDisable(true);
+        btnReplaceAll.setDisable(true);
+
+
+
+
+
        if (!txtFSpace.getText().isEmpty()){
            btnSaveOnAction(actionEvent);
        }
@@ -305,9 +328,6 @@ public class TheTextViewConsoleControl {
     }
 
     public void btnFindOnAction(ActionEvent actionEvent) {
-
-        btnReplace.setDisable(false);
-        btnReplaceAll.setDisable(false);
 
         txtFSpace.deselect();
         if(textChanges){
