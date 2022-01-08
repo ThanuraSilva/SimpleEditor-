@@ -140,7 +140,7 @@
             <Font size="15.0" />
          </font>
       </Label>
-      <Button fx:id="Print" layoutX="581.0" layoutY="187.0" mnemonicParsing="false" onAction="#btnPrintOnAction" prefHeight="29.0" prefWidth="81.0" style="-fx-background-color: #0fb9b1;" text="Paste" textFill="WHITE">
+      <Button fx:id="btnPrint" layoutX="581.0" layoutY="187.0" mnemonicParsing="false" onAction="#btnPrintOnAction" prefHeight="29.0" prefWidth="81.0" style="-fx-background-color: #0fb9b1;" text="Print" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
