@@ -31,18 +31,28 @@
 }
 
 .btn-find {
+    -fx-graphic: url(../assets/search.png);
+    -fx-background-color: transparent;
 }
 
 .btn-replaceAll {
+    -fx-graphic: url(../assets/replace.png);
+    -fx-background-color: transparent;
 }
 
 .btn-up {
 }
 
 .btn-replace {
+    -fx-graphic: url(../assets/replace.png);
+    -fx-background-color: transparent;
 }
 
 .btn-clear {
+    -fx-graphic: url(../assets/cleaning.png);
+    -fx-background-color: transparent;
+    -fx-pref-width: 32px;
+    -fx-pref-height: 32px;
 }
 
 .btn-down {
