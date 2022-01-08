@@ -21,6 +21,7 @@ import java.nio.file.Files;
 
 import java.nio.file.Paths;
 import java.util.Arrays;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 
@@ -54,7 +55,11 @@ public class TheTextViewConsoleControl {
     public JFXToggleButton tglRegex;
     public Button btnFind;
     public Button btnReplaceAll;
-    public AnchorPane txtEditorConsole;
+    public AnchorPane editorConsole;
+
+    private boolean textChanges = false;
+    private Matcher matcher;
+
 
     public void initialize(){
 
@@ -176,7 +181,7 @@ public class TheTextViewConsoleControl {
         btnCopy.setDisable(disableFields);
         btnCut.setDisable(disableFields);
         btnPaste.setDisable(disableFields);
-        txtReplace.setDisable(disableFields);
+        //txtReplace.setDisable(disableFields);
         btnReplace.setDisable(disableFields);
         btnReplaceAll.setDisable(disableFields);
     }
@@ -254,6 +259,7 @@ public class TheTextViewConsoleControl {
     public void btnClearOnAction(ActionEvent actionEvent) {
         txtFind.clear();
         txtReplace.clear();
+        lblTotFinds.setText("");
 
     }
 
@@ -261,14 +267,44 @@ public class TheTextViewConsoleControl {
     }
 
     public void tglCaseSensitiveOnAction(ActionEvent actionEvent) {
+        textChanges = true;
+        btnFind.fire();
     }
 
     public void tglRegexOnAction(ActionEvent actionEvent) {
+        textChanges = true;
+        btnFind.fire();
+
     }
 
     public void btnFindOnAction(ActionEvent actionEvent) {
+
+        int count=0;
+
         btnReplace.setDisable(false);
         btnReplaceAll.setDisable(false);
+        txtReplace.setDisable(false);
+
+        txtFSpace.deselect();
+        if(textChanges){
+            int flags = 0;
+
+            if(!tglCaseSense.isSelected()) flags = flags | Pattern.CASE_INSENSITIVE;
+            if(!tglRegex.isSelected()) flags = flags | Pattern.LITERAL;
+
+             matcher = Pattern.compile(txtFind.getText(), flags).matcher(txtFSpace.getText());
+             textChanges=false;
+
+        }
+        if(matcher.find()){
+            txtFSpace.selectRange(matcher.start(), matcher.end());
+            count++;
+            lblNowFinds.setText(String.valueOf(count));
+        }else {
+            matcher.reset();
+        }
+
+
     }
 
     public void btnReplaceAll(ActionEvent actionEvent) {
