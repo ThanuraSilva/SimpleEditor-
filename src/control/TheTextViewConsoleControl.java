@@ -50,12 +50,12 @@ public class TheTextViewConsoleControl {
     public Label lblCharacterCount;
     public Label lblNowFinds;
     public Label lblTotFinds;
-    public Button Print;
     public JFXToggleButton tglCaseSense;
     public JFXToggleButton tglRegex;
     public Button btnFind;
     public Button btnReplaceAll;
     public AnchorPane editorConsole;
+    public Button btnPrint;
 
     private boolean textChanges = true;
     private Matcher matcher;
