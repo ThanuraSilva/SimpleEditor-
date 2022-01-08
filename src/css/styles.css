@@ -1,0 +1,54 @@
+.btn-save{
+    -fx-graphic: url(../assets/floppy-disk.png);
+    -fx-background-color: transparent;
+}
+
+.btn-open {
+    -fx-graphic: url(../assets/open.png);
+    -fx-background-color: transparent;
+
+}
+
+.btn-copy {
+    -fx-graphic: url(../assets/copy.png);
+    -fx-background-color: transparent;
+
+}
+
+.btn-cut {
+    -fx-graphic: url(../assets/cut.png);
+    -fx-background-color: transparent;
+}
+
+.btn-paste {
+    -fx-graphic: url(../assets/paste.png);
+    -fx-background-color: transparent;
+}
+
+.btn-new {
+    -fx-graphic: url(../assets/new-document.png);
+    -fx-background-color: transparent;
+}
+
+.btn-find {
+}
+
+.btn-replaceAll {
+}
+
+.btn-up {
+}
+
+.btn-replace {
+}
+
+.btn-clear {
+}
+
+.btn-down {
+}
+
+.btn-print {
+    -fx-graphic: url(../assets/printer.png);
+    -fx-background-color: transparent;
+}

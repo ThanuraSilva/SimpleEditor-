@@ -10,65 +10,65 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="editorConsole" prefHeight="879.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.TheTextViewConsoleControl">
+<AnchorPane fx:id="editorConsole" prefHeight="879.0" prefWidth="980.0" stylesheets="../css/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.TheTextViewConsoleControl">
    <children>
-      <MenuButton fx:id="mnuFile" layoutX="39.0" layoutY="63.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="92.0" style="-fx-background-color: #079992;" text="File" textFill="WHITE">
+      <MenuButton fx:id="mnuFile" layoutX="39.0" layoutY="8.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="92.0" style="-fx-background-color: #079992;" text="File" textFill="WHITE">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
       </MenuButton>
-      <MenuButton fx:id="mnuEdit" layoutX="143.0" layoutY="63.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="92.0" style="-fx-background-color: #079992;" text="Edit" textFill="WHITE">
+      <MenuButton fx:id="mnuEdit" layoutX="143.0" layoutY="8.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="92.0" style="-fx-background-color: #079992;" text="Edit" textFill="WHITE">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
       </MenuButton>
-      <MenuButton fx:id="mnuHelp" layoutX="245.0" layoutY="63.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="99.0" style="-fx-background-color: #079992;" text="Help" textFill="WHITE">
+      <MenuButton fx:id="mnuHelp" layoutX="245.0" layoutY="8.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="99.0" style="-fx-background-color: #079992;" text="Help" textFill="WHITE">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
       </MenuButton>
-      <Button fx:id="btnSave" layoutX="129.0" layoutY="187.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="29.0" prefWidth="81.0" style="-fx-background-color: #ff9f1a;" text="Save" textFill="WHITE">
+      <Button fx:id="btnSave" contentDisplay="GRAPHIC_ONLY" layoutX="100.0" layoutY="87.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="42.0" prefWidth="43.0" styleClass="btn-save" stylesheets="@../css/styles.css" text="Save" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="btnOpen" layoutX="219.0" layoutY="187.0" mnemonicParsing="false" onAction="#btnOpenOnAction" prefHeight="29.0" prefWidth="81.0" style="-fx-background-color: #ff9f1a;" styleClass="btnSaveData" text="Open" textFill="WHITE">
+      <Button fx:id="btnOpen" contentDisplay="GRAPHIC_ONLY" layoutX="153.0" layoutY="75.0" mnemonicParsing="false" onAction="#btnOpenOnAction" prefHeight="59.0" prefWidth="61.0" styleClass="btn-open" stylesheets="@../css/styles.css" text="Open" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="btnCopy" layoutX="313.0" layoutY="187.0" mnemonicParsing="false" onAction="#btnCopyOnAction" prefHeight="29.0" prefWidth="81.0" style="-fx-background-color: #0fb9b1;" text="Copy" textFill="WHITE">
+      <Button fx:id="btnCopy" contentDisplay="GRAPHIC_ONLY" layoutX="232.0" layoutY="84.0" mnemonicParsing="false" onAction="#btnCopyOnAction" prefHeight="42.0" prefWidth="61.0" styleClass="btn-copy" stylesheets="@../css/styles.css" text="Copy" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="btnCut" layoutX="401.0" layoutY="187.0" mnemonicParsing="false" onAction="#btnCutOnAction" prefHeight="29.0" prefWidth="81.0" style="-fx-background-color: #0fb9b1;" text="Cut" textFill="WHITE">
+      <Button fx:id="btnCut" contentDisplay="GRAPHIC_ONLY" layoutX="298.0" layoutY="84.0" mnemonicParsing="false" onAction="#btnCutOnAction" prefHeight="29.0" prefWidth="52.0" styleClass="btn-cut" stylesheets="@../css/styles.css" text="Cut" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="btnPaste" layoutX="492.0" layoutY="187.0" mnemonicParsing="false" onAction="#btnPasteOnAction" prefHeight="29.0" prefWidth="81.0" style="-fx-background-color: #0fb9b1;" text="Paste" textFill="WHITE">
+      <Button fx:id="btnPaste" contentDisplay="GRAPHIC_ONLY" layoutX="355.0" layoutY="84.0" mnemonicParsing="false" onAction="#btnPasteOnAction" prefHeight="35.0" prefWidth="61.0" styleClass="btn-paste" stylesheets="@../css/styles.css" text="Paste" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="btnNew" layoutX="39.0" layoutY="187.0" mnemonicParsing="false" onAction="#btnNewOnAction" prefHeight="29.0" prefWidth="81.0" style="-fx-background-color: #ff9f1a;" text="+New" textFill="WHITE">
+      <Button fx:id="btnNew" contentDisplay="GRAPHIC_ONLY" layoutX="41.0" layoutY="87.0" mnemonicParsing="false" onAction="#btnNewOnAction" prefHeight="35.0" prefWidth="52.0" styleClass="btn-new" stylesheets="@../css/styles.css" text="+New" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
       <Separator layoutX="40.0" layoutY="153.0" prefHeight="11.0" prefWidth="580.0" />
-      <Button fx:id="btnFind" layoutX="714.0" layoutY="66.0" mnemonicParsing="false" onAction="#btnFindOnAction" prefHeight="29.0" prefWidth="92.0" style="-fx-background-color: #0fb9b1;" text="Find" textFill="WHITE">
+      <Button fx:id="btnFind" layoutX="714.0" layoutY="66.0" mnemonicParsing="false" onAction="#btnFindOnAction" prefHeight="29.0" prefWidth="92.0" style="-fx-background-color: #0fb9b1;" styleClass="btn-find" text="Find" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="btnReplaceAll" layoutX="815.0" layoutY="114.0" mnemonicParsing="false" onAction="#btnReplaceAll" prefHeight="29.0" prefWidth="92.0" style="-fx-background-color: #0fb9b1;" text="Replace All" textFill="WHITE">
+      <Button fx:id="btnReplaceAll" layoutX="815.0" layoutY="114.0" mnemonicParsing="false" onAction="#btnReplaceAll" prefHeight="29.0" prefWidth="92.0" style="-fx-background-color: #0fb9b1;" styleClass="btn-replaceAll" text="Replace All" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Separator layoutX="44.0" layoutY="46.0" prefHeight="11.0" prefWidth="834.0" />
+      <Separator layoutX="44.0" layoutY="49.0" prefHeight="11.0" prefWidth="834.0" />
       <Label fx:id="lblStatus" layoutX="408.0" layoutY="13.0" prefHeight="25.0" prefWidth="167.0" text="*untitled.txt">
          <font>
             <Font size="20.0" />
@@ -78,24 +78,24 @@
       <Separator layoutX="43.0" layoutY="240.0" prefHeight="11.0" prefWidth="914.0" />
       <JFXToggleButton fx:id="tglCaseSense" layoutX="763.0" layoutY="191.0" onAction="#tglCaseSensitiveOnAction" size="8.0" text="Case Sensitive" />
       <JFXToggleButton fx:id="tglRegex" layoutX="763.0" layoutY="153.0" onAction="#tglRegexOnAction" size="8.0" text="RegEx" />
-      <Button fx:id="btnUp" layoutX="682.0" layoutY="166.0" mnemonicParsing="false" onAction="#btnUpOnAction" prefHeight="29.0" prefWidth="71.0" style="-fx-background-color: #0fb9b1;" text="Up" textFill="WHITE">
+      <Button fx:id="btnUp" layoutX="682.0" layoutY="166.0" mnemonicParsing="false" onAction="#btnUpOnAction" prefHeight="29.0" prefWidth="71.0" style="-fx-background-color: #0fb9b1;" styleClass="btn-up" text="Up" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
-      <TextField fx:id="txtFind" layoutX="389.0" layoutY="63.0" prefHeight="35.0" prefWidth="306.0" promptText="Find" />
-      <TextField fx:id="txtReplace" layoutX="389.0" layoutY="111.0" prefHeight="35.0" prefWidth="306.0" promptText="Replace" />
-      <Button fx:id="btnReplace" layoutX="715.0" layoutY="114.0" mnemonicParsing="false" onAction="#btnReplaceOnAction" prefHeight="29.0" prefWidth="92.0" style="-fx-background-color: #0fb9b1;" text="Replace" textFill="WHITE">
+      <TextField fx:id="txtFind" layoutX="490.0" layoutY="63.0" prefHeight="35.0" prefWidth="205.0" promptText="Find" />
+      <TextField fx:id="txtReplace" layoutX="515.0" layoutY="111.0" prefHeight="35.0" prefWidth="180.0" promptText="Replace" />
+      <Button fx:id="btnReplace" layoutX="715.0" layoutY="114.0" mnemonicParsing="false" onAction="#btnReplaceOnAction" prefHeight="29.0" prefWidth="92.0" style="-fx-background-color: #0fb9b1;" styleClass="btn-replace" text="Replace" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="btnClear" layoutX="814.0" layoutY="66.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="29.0" prefWidth="92.0" style="-fx-background-color: #0fb9b1;" text="Clear" textFill="WHITE">
+      <Button fx:id="btnClear" layoutX="814.0" layoutY="66.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="29.0" prefWidth="92.0" style="-fx-background-color: #0fb9b1;" styleClass="btn-clear" text="Clear" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="btnDwn" layoutX="682.0" layoutY="200.0" mnemonicParsing="false" onAction="#btnDwnOnAction" prefHeight="29.0" prefWidth="71.0" style="-fx-background-color: #0fb9b1;" text="Down" textFill="WHITE">
+      <Button fx:id="btnDwn" layoutX="682.0" layoutY="200.0" mnemonicParsing="false" onAction="#btnDwnOnAction" prefHeight="29.0" prefWidth="71.0" style="-fx-background-color: #0fb9b1;" styleClass="btn-down" text="Down" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
@@ -140,7 +140,7 @@
             <Font size="15.0" />
          </font>
       </Label>
-      <Button fx:id="btnPrint" layoutX="581.0" layoutY="187.0" mnemonicParsing="false" onAction="#btnPrintOnAction" prefHeight="29.0" prefWidth="81.0" style="-fx-background-color: #0fb9b1;" text="Print" textFill="WHITE">
+      <Button fx:id="btnPrint" contentDisplay="GRAPHIC_ONLY" layoutX="415.0" layoutY="87.0" mnemonicParsing="false" onAction="#btnPrintOnAction" prefHeight="35.0" prefWidth="61.0" styleClass="btn-print" stylesheets="@../css/styles.css" text="Print" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
