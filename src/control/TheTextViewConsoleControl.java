@@ -61,6 +61,18 @@ public class TheTextViewConsoleControl {
     private boolean textChanges = true;
     private Matcher matcher;
     private int count=0;
+    //private Matcher match;
+
+    private void findCountDetails(Matcher matcher) {
+        int findCount =0;
+        while (matcher.find()){
+            txtFSpace.selectRange(matcher.start(), matcher.end());
+            findCount++;
+        }
+        lblTotFinds.setText(String.valueOf(findCount));
+        matcher.reset();
+    }
+
 
 
     public void initialize(){
@@ -121,11 +133,11 @@ public class TheTextViewConsoleControl {
             btnClear.setDisable(false);
         });
 
-        txtFSpace.textProperty().addListener((observable, oldValue, newValue) -> {
-            textChanges=true;
-            btnFind.fire();
-
-        });
+//        txtFSpace.textProperty().addListener((observable, oldValue, newValue) -> {
+//            textChanges=true;
+//            btnFind.fire();
+//
+//        });
 
         m1.setOnAction(this::btnNewOnAction);
 
@@ -326,7 +338,6 @@ public class TheTextViewConsoleControl {
 
     public void btnDwnOnAction(ActionEvent actionEvent) {
 
-
     }
 
     public void btnClearOnAction(ActionEvent actionEvent) {
@@ -349,8 +360,7 @@ public class TheTextViewConsoleControl {
 
     public void btnFindOnAction(ActionEvent actionEvent) {
 
-
-           //txtFSpace.deselect();
+           txtFSpace.deselect();
 
                 if (textChanges) {
                     int flags = 0;
@@ -361,7 +371,7 @@ public class TheTextViewConsoleControl {
 
                     matcher = Pattern.compile(txtFind.getText(), flags).
                             matcher(txtFSpace.getText());
-
+                    findCountDetails(matcher);
 
                     textChanges = false;
 
@@ -371,7 +381,6 @@ public class TheTextViewConsoleControl {
                     count++;
                     lblNowFinds.setText(String.valueOf(count));
 
-
                 } else {
                     matcher.reset();
                     count = 0;
@@ -380,6 +389,9 @@ public class TheTextViewConsoleControl {
 
 
     }
+
+
+
 
     public void btnReplaceAll(ActionEvent actionEvent) {
 
