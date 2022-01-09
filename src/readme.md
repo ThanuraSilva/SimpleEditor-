@@ -5,7 +5,7 @@ SimpleNoteEditor++ is a basic text editor application and the key objective of d
 Briefing of SimpleNoteEditor++
 As told in the beginning, this application is based on Java FX and the JDK version here is Java 1.8. This application comprises all the essential commands of a general text editor as-:
 
-Copy, cut, paste, and find and replace the mechanism.
+Basic Functions as copy, cut, paste, and find - replace.
 Emphasized some key processes are through graphical icon panels.
 Especially, the application armed with find and replaced filtering mechanism
 based on a case-sensitive/insensitive and Regex. Couple of toggles here to enable and disable the features.
