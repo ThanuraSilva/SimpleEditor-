@@ -102,42 +102,42 @@
       </Button>
       <Label layoutX="736.0" layoutY="827.0" prefHeight="25.0" prefWidth="158.0" text="Total Words: " AnchorPane.bottomAnchor="27.0" AnchorPane.rightAnchor="86.0">
          <font>
-            <Font size="15.0" />
+            <Font name="System Bold" size="15.0" />
          </font>
       </Label>
       <Label fx:id="lblWordCount" layoutX="880.0" layoutY="827.0" prefHeight="25.0" prefWidth="71.0" text="0" AnchorPane.bottomAnchor="27.0" AnchorPane.rightAnchor="29.0">
          <font>
-            <Font size="15.0" />
+            <Font name="System Bold" size="15.0" />
          </font>
       </Label>
       <Label layoutX="482.0" layoutY="828.0" prefHeight="25.0" prefWidth="180.0" text="Total Charactors: " AnchorPane.bottomAnchor="27.0" AnchorPane.rightAnchor="318.0">
          <font>
-            <Font size="15.0" />
+            <Font name="System Bold" size="15.0" />
          </font>
       </Label>
       <Label fx:id="lblCharacterCount" layoutX="658.0" layoutY="828.0" prefHeight="25.0" prefWidth="71.0" text="0" AnchorPane.bottomAnchor="27.0" AnchorPane.rightAnchor="251.0">
          <font>
-            <Font size="15.0" />
+            <Font name="System Bold" size="15.0" />
          </font>
       </Label>
       <Label layoutX="45.0" layoutY="827.0" prefHeight="25.0" prefWidth="43.0" text="Find:" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="45.0">
          <font>
-            <Font size="15.0" />
+            <Font name="System Bold" size="15.0" />
          </font>
       </Label>
       <Label fx:id="lblNowFinds" layoutX="87.0" layoutY="827.0" prefHeight="25.0" prefWidth="34.0" text="0" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="87.0">
          <font>
-            <Font size="15.0" />
+            <Font name="System Bold" size="15.0" />
          </font>
       </Label>
       <Label layoutX="107.0" layoutY="828.0" prefHeight="25.0" prefWidth="24.0" text="/" AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="107.0">
          <font>
-            <Font size="15.0" />
+            <Font name="System Bold" size="15.0" />
          </font>
       </Label>
       <Label fx:id="lblTotFinds" layoutX="123.0" layoutY="827.0" prefHeight="25.0" prefWidth="34.0" text="0" AnchorPane.bottomAnchor="27.0">
          <font>
-            <Font size="15.0" />
+            <Font name="System Bold" size="15.0" />
          </font>
       </Label>
       <Button fx:id="btnPrint" contentDisplay="GRAPHIC_ONLY" layoutX="415.0" layoutY="87.0" mnemonicParsing="false" onAction="#btnPrintOnAction" prefHeight="35.0" prefWidth="61.0" styleClass="btn-print" stylesheets="@../css/styles.css" text="Print" textFill="WHITE">

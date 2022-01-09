@@ -6,6 +6,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.StringJoiner;
 
 public class AppInitializer extends Application {
 
@@ -19,8 +20,10 @@ public class AppInitializer extends Application {
                 getClass().getResource("view/TheTextViewConsole.fxml")
         )));
         primaryStage.setTitle("SimpleEditor++ V.0.2.0");
+        primaryStage.setTitle("Test");
         primaryStage.setResizable(true);
         primaryStage.show();
+
 
 
 

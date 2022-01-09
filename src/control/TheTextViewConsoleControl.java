@@ -21,6 +21,7 @@ import java.net.URL;
 import java.nio.file.Files;
 
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -61,19 +62,24 @@ public class TheTextViewConsoleControl {
     private boolean textChanges = true;
     private Matcher matcher;
     private int count=0;
-    //private Matcher match;
+    //private Matcher match = matcher;
+    private ArrayList<String>findList = new ArrayList<>();
+
+
 
     private void findCountDetails(Matcher matcher) {
+        int testCount=0;
+        System.out.println(testCount++);
+
         int findCount =0;
         while (matcher.find()){
             txtFSpace.selectRange(matcher.start(), matcher.end());
             findCount++;
         }
         lblTotFinds.setText(String.valueOf(findCount));
+
         matcher.reset();
     }
-
-
 
     public void initialize(){
 
@@ -133,11 +139,10 @@ public class TheTextViewConsoleControl {
             btnClear.setDisable(false);
         });
 
-//        txtFSpace.textProperty().addListener((observable, oldValue, newValue) -> {
-//            textChanges=true;
-//            btnFind.fire();
-//
-//        });
+        txtFSpace.textProperty().addListener((observable, oldValue, newValue) -> {
+            textChanges=true;
+            btnFind.fire();
+        });
 
         m1.setOnAction(this::btnNewOnAction);
 
@@ -278,6 +283,7 @@ public class TheTextViewConsoleControl {
                 new Alert(Alert.AlertType.ERROR,"Please Save the File").show();
             }
 
+
     }
 
     public void btnOpenOnAction(ActionEvent actionEvent) {
@@ -337,6 +343,9 @@ public class TheTextViewConsoleControl {
     }
 
     public void btnDwnOnAction(ActionEvent actionEvent) {
+//        for (String btnDwn:findList) {
+//            lblNowFinds.setText(btnDwn);
+//        }
 
     }
 
@@ -386,10 +395,7 @@ public class TheTextViewConsoleControl {
                     count = 0;
                 }
 
-
-
     }
-
 
 
 

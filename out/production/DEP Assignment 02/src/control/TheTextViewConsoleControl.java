@@ -21,6 +21,7 @@ import java.net.URL;
 import java.nio.file.Files;
 
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -61,15 +62,22 @@ public class TheTextViewConsoleControl {
     private boolean textChanges = true;
     private Matcher matcher;
     private int count=0;
-    //private Matcher match;
+    //private Matcher match = matcher;
+    private ArrayList<String>findList = new ArrayList<>();
+
+
 
     private void findCountDetails(Matcher matcher) {
+        int testCount=0;
+        System.out.println(testCount++);
+
         int findCount =0;
         while (matcher.find()){
             txtFSpace.selectRange(matcher.start(), matcher.end());
             findCount++;
         }
         lblTotFinds.setText(String.valueOf(findCount));
+
         matcher.reset();
     }
 
@@ -131,11 +139,10 @@ public class TheTextViewConsoleControl {
             btnClear.setDisable(false);
         });
 
-//        txtFSpace.textProperty().addListener((observable, oldValue, newValue) -> {
-//            textChanges=true;
-//            btnFind.fire();
-//
-//        });
+        txtFSpace.textProperty().addListener((observable, oldValue, newValue) -> {
+            textChanges=true;
+            btnFind.fire();
+        });
 
         m1.setOnAction(this::btnNewOnAction);
 
@@ -335,6 +342,9 @@ public class TheTextViewConsoleControl {
     }
 
     public void btnDwnOnAction(ActionEvent actionEvent) {
+//        for (String btnDwn:findList) {
+//            lblNowFinds.setText(btnDwn);
+//        }
 
     }
 
@@ -358,7 +368,6 @@ public class TheTextViewConsoleControl {
 
     public void btnFindOnAction(ActionEvent actionEvent) {
 
-
            txtFSpace.deselect();
 
                 if (textChanges) {
@@ -372,7 +381,6 @@ public class TheTextViewConsoleControl {
                             matcher(txtFSpace.getText());
                     findCountDetails(matcher);
 
-
                     textChanges = false;
 
                 }
@@ -381,17 +389,12 @@ public class TheTextViewConsoleControl {
                     count++;
                     lblNowFinds.setText(String.valueOf(count));
 
-
-
                 } else {
                     matcher.reset();
                     count = 0;
                 }
 
-
-
     }
-
 
 
 
