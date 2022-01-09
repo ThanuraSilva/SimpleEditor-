@@ -1,5 +1,5 @@
 .btn-save{
-    -fx-graphic: url(../assets/floppy-disk.png);
+    -fx-graphic: url(../assets/save.png);
     -fx-background-color: transparent;
 }
 
@@ -31,7 +31,7 @@
 }
 
 .btn-find {
-    -fx-graphic: url(../assets/search.png);
+    -fx-graphic: url(../assets/find.png);
     -fx-background-color: transparent;
 }
 
@@ -41,6 +41,9 @@
 }
 
 .btn-up {
+    -fx-graphic: url(../assets/up-btn.png);
+    -fx-background-color: transparent;
+    -fx-rotate: 180deg;
 }
 
 .btn-replace {
@@ -49,16 +52,18 @@
 }
 
 .btn-clear {
-    -fx-graphic: url(../assets/cleaning.png);
+    -fx-graphic: url(../assets/clear.png);
     -fx-background-color: transparent;
     -fx-pref-width: 32px;
     -fx-pref-height: 32px;
 }
 
 .btn-down {
+    -fx-graphic: url(../assets/down-chevron.png);
+    -fx-background-color: transparent;
 }
 
 .btn-print {
-    -fx-graphic: url(../assets/printer.png);
+    -fx-graphic: url(../assets/print.png);
     -fx-background-color: transparent;
 }

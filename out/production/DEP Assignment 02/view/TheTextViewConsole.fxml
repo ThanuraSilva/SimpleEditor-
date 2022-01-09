@@ -76,9 +76,9 @@
       </Label>
       <TextArea fx:id="txtFSpace" layoutX="53.0" layoutY="249.0" prefHeight="553.0" prefWidth="891.0" AnchorPane.bottomAnchor="77.0" AnchorPane.leftAnchor="53.0" AnchorPane.rightAnchor="36.0" AnchorPane.topAnchor="249.0" />
       <Separator layoutX="46.0" layoutY="809.0" prefHeight="11.0" prefWidth="898.0" />
-      <JFXToggleButton fx:id="tglCaseSense" layoutX="787.0" layoutY="128.0" onAction="#tglCaseSensitiveOnAction" size="8.0" text="Case Sensitive" />
-      <JFXToggleButton fx:id="tglRegex" layoutX="786.0" layoutY="80.0" onAction="#tglRegexOnAction" size="8.0" text="RegEx" />
-      <Button fx:id="btnUp" layoutX="784.0" layoutY="176.0" mnemonicParsing="false" onAction="#btnUpOnAction" prefHeight="29.0" prefWidth="71.0" style="-fx-background-color: #0fb9b1;" styleClass="btn-up" text="Up" textFill="WHITE">
+      <JFXToggleButton fx:id="tglCaseSense" layoutX="786.0" layoutY="111.0" onAction="#tglCaseSensitiveOnAction" size="8.0" text="Case Sensitive" />
+      <JFXToggleButton fx:id="tglRegex" layoutX="786.0" layoutY="71.0" onAction="#tglRegexOnAction" size="8.0" text="RegEx" />
+      <Button fx:id="btnUp" contentDisplay="GRAPHIC_ONLY" layoutX="776.0" layoutY="172.0" mnemonicParsing="false" onAction="#btnUpOnAction" prefHeight="42.0" prefWidth="52.0" styleClass="btn-up" stylesheets="@../css/styles.css" text="Up" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
@@ -90,17 +90,17 @@
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="btnClear" contentDisplay="GRAPHIC_ONLY" layoutX="668.0" layoutY="71.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="59.0" prefWidth="62.0" styleClass="btn-clear" stylesheets="@../css/styles.css" text="Clear" textFill="WHITE">
+      <Button fx:id="btnClear" contentDisplay="GRAPHIC_ONLY" layoutX="668.0" layoutY="91.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="50.0" prefWidth="52.0" styleClass="btn-clear" stylesheets="@../css/styles.css" text="Clear" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="btnDwn" layoutX="866.0" layoutY="176.0" mnemonicParsing="false" onAction="#btnDwnOnAction" prefHeight="29.0" prefWidth="71.0" style="-fx-background-color: #0fb9b1;" styleClass="btn-down" text="Down" textFill="WHITE">
+      <Button fx:id="btnDwn" contentDisplay="GRAPHIC_ONLY" layoutX="826.0" layoutY="173.0" mnemonicParsing="false" onAction="#btnDwnOnAction" prefHeight="29.0" prefWidth="52.0" styleClass="btn-down" stylesheets="@../css/styles.css" text="Down" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
-      <Label layoutX="736.0" layoutY="827.0" prefHeight="25.0" prefWidth="158.0" text="Your Word Count: " AnchorPane.bottomAnchor="27.0" AnchorPane.rightAnchor="86.0">
+      <Label layoutX="736.0" layoutY="827.0" prefHeight="25.0" prefWidth="158.0" text="Total Words: " AnchorPane.bottomAnchor="27.0" AnchorPane.rightAnchor="86.0">
          <font>
             <Font size="15.0" />
          </font>
@@ -110,7 +110,7 @@
             <Font size="15.0" />
          </font>
       </Label>
-      <Label layoutX="482.0" layoutY="828.0" prefHeight="25.0" prefWidth="180.0" text="Your Charactor Count: " AnchorPane.bottomAnchor="27.0" AnchorPane.rightAnchor="318.0">
+      <Label layoutX="482.0" layoutY="828.0" prefHeight="25.0" prefWidth="180.0" text="Total Charactors: " AnchorPane.bottomAnchor="27.0" AnchorPane.rightAnchor="318.0">
          <font>
             <Font size="15.0" />
          </font>
