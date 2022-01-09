@@ -7,9 +7,9 @@ As told in the beginning, this application is based on Java FX and the JDK versi
 
 Basic Functions as copy, cut, paste, and find - replace.
 Emphasized some key processes are through graphical icon panels.
-Especially, the application armed with find and replaced filtering mechanism
-based on a case-sensitive/insensitive and Regex. Couple of toggles here to enable and disable the features.
+Especially, the application armed with find and replaced filtering mechanism based on a case-sensitive/insensitive and Regex. Couple of toggles here to enable and disable the features.
 Basic validations are applicable when saving the file and exiting the application.
+
 How to use the program
 This application covered the MIT license as an open-source project. The details of the tram and its condition can be grabbed when going through the attached license file.
 
