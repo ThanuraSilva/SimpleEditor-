@@ -7,7 +7,7 @@
 
 <AnchorPane prefHeight="450.0" prefWidth="793.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.AboutApplicationControl">
    <children>
-      <Label layoutX="378.0" layoutY="52.0" text="SimpleEditor++ V.0.1.0">
+      <Label layoutX="378.0" layoutY="52.0" text="SimpleEditor++ V.0.2.0">
          <font>
             <Font size="33.0" />
          </font>
@@ -17,7 +17,7 @@
             <Font name="System Italic" size="16.0" />
          </font>
       </Label>
-      <TextArea editable="false" layoutX="-3.0" layoutY="249.0" prefHeight="205.0" prefWidth="832.0" style="-fx-border-color: #0000;" styleClass="txtAreaNew" text="TextView is a simple text viwer and specialy encompassed with essential commands to easy your&#10;text manipulating pattern. New unique button patterns included from this version &#10;&#10;Powered by Thanu IT - 2022 January&#10;">
+      <TextArea editable="false" layoutX="-3.0" layoutY="249.0" prefHeight="205.0" prefWidth="832.0" style="-fx-border-color: #0000;" styleClass="txtAreaNew" text="TextView is a simple text viwer and specialy encompassed with essential commands to easy your&#10;text manipulating pattern. New unique button patterns included from this version &#10;&#10;&#10;CopyRight © Thanura Silva - All Right Reserved&#10;2022&#10;">
          <font>
             <Font size="15.0" />
          </font>

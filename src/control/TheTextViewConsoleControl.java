@@ -284,7 +284,7 @@ public class TheTextViewConsoleControl {
 
     }
     public void btnPrintOnAction(ActionEvent actionEvent) {
-          //to be programed
+         //
     }
     
     public void btnCopyOnAction(ActionEvent actionEvent) {
