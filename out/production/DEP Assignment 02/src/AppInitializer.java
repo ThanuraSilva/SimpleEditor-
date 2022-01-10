@@ -20,8 +20,7 @@ public class AppInitializer extends Application {
         primaryStage.setScene(new Scene(FXMLLoader.load(
                 getClass().getResource("view/TheTextViewConsole.fxml")
         )));
-        primaryStage.setTitle("SimpleEditor++ V.0.2.0");
-        primaryStage.setTitle("Test");
+        primaryStage.setTitle("SimpleEditor++");
         primaryStage.setResizable(true);
         primaryStage.show();
 
