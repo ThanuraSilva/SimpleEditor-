@@ -20,4 +20,4 @@ This project will be updated with optimizing the facilities that match the forth
 ## Licence
 Copyright © Thanura Silva. All rights reserved.
 
-Licensed under the [MIT](/src/license.txt) license.
+Licensed under the [MIT](/license.txt) license.
