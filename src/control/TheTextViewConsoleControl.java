@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Font;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
@@ -86,6 +87,7 @@ public class TheTextViewConsoleControl {
 
         setDisableFields(true);
         txtFSpace.setWrapText(false);
+
 
         MenuItem m1 = new MenuItem("New");
         MenuItem m2 = new MenuItem("Open");

@@ -43,7 +43,12 @@
 .btn-up {
     -fx-graphic: url(../assets/up-btn.png);
     -fx-background-color: transparent;
-    -fx-rotate: 180deg;
+    -fx-rotate: 90deg;
+}
+.btn-down {
+    -fx-graphic: url(../assets/down-chevron.png);
+    -fx-background-color: transparent;
+    -fx-rotate: 270deg;
 }
 
 .btn-replace {

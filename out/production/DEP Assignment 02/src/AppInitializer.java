@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.StringJoiner;
 
+
 public class AppInitializer extends Application {
 
     public static void main(String[] args) {
