@@ -1,5 +1,5 @@
-## The repository of SimpleNoteEditor++
-SimpleNoteEditor++ is a basic text editor application and the key objective of developing the application is, enhancing the programming skills of the Java programming language. The application is developed through JavaFX and to achieve the mentioned objective, it is applied here several features included in the JavaFX API.
+## The repository of SimpleEditor++
+SimpleEditor++ is a basic text editor application and the key objective of developing the application is, enhancing the programming skills of the Java programming language. The application is developed through JavaFX and to achieve the mentioned objective, it is applied here several features included in the JavaFX API.
 
 ![This is the view of the application](./src/assets/SimpleEditor++.png)
 
